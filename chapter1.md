@@ -68,3 +68,27 @@ ok
 ```
 通过使用`MGET, MSET`命令，可以以此设置和获取多个值，对于`MGET`命令，返回的是一个数组
 
+### Key相关命令
+```redis
+> set mykey hello
+OK
+> exists mykey
+(integer) 1
+> del mykey
+(integer) 1
+> exists mykey
+(integer) 0
+```
+可以是否`EXISTS,DEL`等命令对于任何形式的key进行判断和删除的操作，同时这种操作都会返回相整型
+`1`和`0`结果来表明操作是否成功, 当然也可以使用`TYPE`命令来查看key所对应的值的类型(如果对应的key不存在，则返回`none`)
+
+#### Key的生命周期
+对于一个key来说，其是可以设置生命周期的，一旦周期到了，相对应的key会自动删除，就像是使用`DEL`命令一样
+- 对于周期的控制可以使用秒或者毫秒
+- 生命周期的计数单位是毫秒
+- 如果Redis的服务器停止工作，那么将会被强制过期
+
+可以使用`EXPIRE`命令来设置过期时间，该命令设置的时间单位是秒,相反的在key过期之前，可以使用`PERSIST`来设置key永远不过期
+对于设置过期使用`EXPIRE`以外，还可以在创建的时候，设置key的过期时间，比如:`SET key key-value ex expire_time`来设置
+这个时候，可以使用`TTL`来查看key还剩余的时间，对于更为精确的时间设置与查看则需要使用到`PEXPIRE, PTTL`
+
