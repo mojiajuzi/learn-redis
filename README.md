@@ -34,17 +34,17 @@ Redis将所有的数据存储在内存中，因此这方面的开销依旧是费
 - 可排序集合(Sort Sets)
 
 ##### 字符串
-![](/assets/string.svg)
+![string](/assets/string.svg)
 
 #### 链表
-![](/assets/lists.svg)
+![list](/assets/lists.svg)
 
 #### 哈希
-![](/assets/hash.svg)
+![hash](/assets/hash.svg)
 
 #### 集合
-![](/assets/set.svg)
+![set](/assets/set.svg)
 
 #### 可排序集合
-![](/assets/sort_set.svg)
+![sort set](/assets/sort_set.svg)
 
