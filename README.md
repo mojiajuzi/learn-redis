@@ -26,3 +26,25 @@ Redis将所有的数据存储在内存中，因此这方面的开销依旧是费
 - 数据值是任意结构的二进制数组并且Redis并不关心值
 -　Redis包含五种特殊的数据值结构
 
+#### 五种数据类型
+- 字符串(String)
+- 链表(List)
+- 哈希(Hash)
+- 集合(Sets)
+- 可排序集合(Sort Sets)
+
+##### 字符串
+![](/assets/string.svg)
+
+#### 链表
+![](/assets/lists.svg)
+
+#### 哈希
+![](/assets/hash.svg)
+
+#### 集合
+![](/assets/set.svg)
+
+#### 可排序集合
+![](/assets/sort_set.svg)
+
